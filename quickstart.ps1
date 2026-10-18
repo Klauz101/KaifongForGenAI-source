@@ -94,7 +94,12 @@ Write-Host "==> Installing dependencies"
 if ($LASTEXITCODE -ne 0) {
     Fail "Could not install Python dependencies."
 }
-& $Npm install --prefix (Join-Path $PSScriptRoot "frontend")
+Push-Location (Join-Path $PSScriptRoot "frontend")
+try {
+    & $Npm install
+} finally {
+    Pop-Location
+}
 if ($LASTEXITCODE -ne 0) {
     Fail "Could not install frontend dependencies."
 }
