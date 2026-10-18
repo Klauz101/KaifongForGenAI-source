@@ -1,0 +1,63 @@
+# Triage evaluation (SPEC 15 Phase 7): 10 SYNTHETIC elder histories with an expected level.
+# STATUS: expected levels are PROPOSED BY THE DEVELOPERS from plain-language reasoning written BEFORE running the
+# engine. They are NOT yet agreed by the team. The pitch deck's "x/10 correct" is only meaningful once the team
+# (ideally with a social worker) has agreed or changed each row. `debated: true` marks rows people may disagree on.
+# History: 21 daily calls, days_ago 0 (today) .. 20. Everything is a normal day unless overridden.
+# Normal day: mood 4, sleep good, appetite normal, meds yes, pain none, went_out yes, no loneliness, no confusion.
+agreed_by_team: false
+cases:
+  - id: t01
+    title: "Stable for three weeks"
+    expected: green
+    rationale: "Nothing unusual compared with how they normally are."
+  - id: t02
+    title: "Skipped meals on two days this week"
+    expected: amber
+    overrides: {1: {appetite: skipped_meals}, 4: {appetite: skipped_meals}}
+    rationale: "Eating less twice in a week is worth a follow-up this week, not an emergency."
+  - id: t03
+    title: "Normally goes out daily, but has not left home for five days"
+    expected: amber
+    overrides: {0: {went_out: "no"}, 1: {went_out: "no"}, 2: {went_out: "no"}, 3: {went_out: "no"}, 4: {went_out: "no"}}
+    rationale: "A change from their own routine: someone should check in this week."
+  - id: t04
+    title: "Did not answer the last two scheduled calls"
+    expected: red
+    no_answer: [0, 1]
+    rationale: "Two missed calls in a row could mean a fall or illness: act now."
+  - id: t05
+    title: "Very low mood (1 of 5) on the last two calls"
+    expected: red
+    overrides: {0: {mood: 1}, 1: {mood: 1}}
+    rationale: "Sustained very low mood needs a person now."
+  - id: t06
+    title: "Slept badly on three of the last five nights"
+    expected: amber
+    overrides: {0: {sleep: poor}, 2: {sleep: poor}, 4: {sleep: poor}}
+    rationale: "A new sleep problem: follow up this week."
+  - id: t07
+    title: "Has always slept badly (every call for three weeks)"
+    expected: green
+    debated: true
+    base: {sleep: poor}
+    rationale: "Poor sleep is their normal, so it is not a change. (Some social workers would still want to ask about it.)"
+  - id: t08
+    title: "Repeated a question or lost track of the day on three of the last five calls (never before)"
+    expected: amber
+    overrides: {0: {confusion: [repeated_question]}, 2: {confusion: [wrong_day_or_date]}, 3: {confusion: [repeated_question]}}
+    rationale: "New signs of confusion deserve a visit this week."
+  - id: t09
+    title: "Reported severe pain yesterday"
+    expected: amber
+    overrides: {1: {pain: severe}}
+    debated: true
+    rationale: "Severe pain should be looked at soon; some would call it urgent (Red) if it continued."
+  - id: t10
+    title: "Several warning signs at once: skipped meals, missed medicine, not going out, severe pain"
+    expected: red
+    overrides:
+      0: {appetite: skipped_meals, meds: "no", went_out: "no"}
+      1: {appetite: skipped_meals, meds: "no", went_out: "no", pain: severe}
+      2: {went_out: "no"}
+      3: {went_out: "no"}
+    rationale: "A sharp change across many areas: act now."

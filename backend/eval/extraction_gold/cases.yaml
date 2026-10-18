@@ -1,0 +1,158 @@
+# Extraction gold set (SPEC 15 Phase 7): 30 SYNTHETIC call transcripts with hand-written gold values.
+# Written by the developers, not real older speakers. Unlisted gold fields take the default:
+#   mood null, sleep/appetite/meds_taken/pain/went_out_today unknown, social_contact [none_mentioned],
+#   loneliness false, confusion [none].  "unknown" is the RIGHT answer when the person did not say.
+# tag: easy = plain wording; negation = traps; hard = paraphrase the offline keyword extractor was not designed for
+#      (it exists to show honest accuracy; do not tune the extractor or the gold to hit a target).
+# TODO: add transcripts from consented real calls (never commit real recordings or names).
+cases:
+  - id: e01
+    tag: easy
+    lang: yue
+    turns: ["早晨，冇食午飯，冇胃口", "冇出街，膝頭哥幾痛"]
+    gold: {appetite: skipped_meals, went_out_today: "no", pain: moderate}
+  - id: e02
+    tag: easy
+    lang: yue
+    turns: ["早晨，食咗早餐", "琴晚瞓得好", "食咗藥", "落咗街公園行下", "冇痛，好開心"]
+    gold: {appetite: normal, sleep: good, meds_taken: "yes", went_out_today: "yes", pain: none, mood: 4}
+  - id: e03
+    tag: easy
+    lang: yue
+    turns: ["瞓唔著，醒咗好多次", "有啲孤單，成日都得我一個"]
+    gold: {sleep: poor, loneliness_expressed: true, mood: 2}
+  - id: e04
+    tag: easy
+    lang: yue
+    turns: ["食咗飯", "未食藥，唔記得"]
+    gold: {appetite: normal, meds_taken: "no"}
+  - id: e05
+    tag: easy
+    lang: yue
+    turns: ["食咗一半，另一款唔記得"]
+    gold: {meds_taken: partial}
+  - id: e06
+    tag: easy
+    lang: yue
+    turns: ["背脊痛得好犀利，成晚都痛"]
+    gold: {pain: severe}
+  - id: e07
+    tag: easy
+    lang: yue
+    turns: ["有少少痛，不過唔緊要"]
+    gold: {pain: mild}
+  - id: e08
+    tag: easy
+    lang: yue
+    turns: ["個仔星期日打電話俾我"]
+    gold: {social_contact: [family_call]}
+  - id: e09
+    tag: easy
+    lang: yue
+    turns: ["同街坊傾咗幾句", "朋友嚟過我度"]
+    gold: {social_contact: [friend, neighbour]}
+  - id: e10
+    tag: easy
+    lang: yue
+    turns: ["咦，你頭先問過我食咗飯未？"]
+    gold: {confusion_cues: [repeated_question], appetite: unknown}
+  - id: e11
+    tag: easy
+    lang: yue
+    turns: ["今日係星期幾呀？"]
+    gold: {confusion_cues: [wrong_day_or_date]}
+  - id: e12
+    tag: negation
+    lang: yue
+    turns: ["冇食藥", "我冇痛"]
+    gold: {meds_taken: "no", pain: none}
+  - id: e13
+    tag: hard
+    lang: yue
+    turns: ["朝早只係飲咗杯水，其他乜都食唔落"]
+    gold: {appetite: skipped_meals}
+  - id: e14
+    tag: hard
+    lang: yue
+    turns: ["琴晚成晚冇點瞓"]
+    gold: {sleep: poor}
+  - id: e15
+    tag: hard
+    lang: yue
+    turns: ["今日冇落過樓"]
+    gold: {went_out_today: "no"}
+  - id: e16
+    tag: hard
+    lang: yue
+    turns: ["好掛住我個女，佢喺外國，好耐冇見"]
+    gold: {loneliness_expressed: true, mood: 2}
+  - id: e17
+    tag: easy
+    lang: yue
+    turns: ["嗯，係呀"]
+    gold: {}
+  - id: e18
+    tag: easy
+    lang: yue
+    turns: ["吓？聽唔到", "你講乜嘢？"]
+    gold: {}
+  - id: e19
+    tag: easy
+    lang: yue
+    turns: ["食咗飯，瞓得幾好", "落咗街買餸，同朋友飲茶"]
+    gold: {appetite: normal, sleep: good, went_out_today: "yes", social_contact: [friend]}
+  - id: e20
+    tag: hard
+    lang: yue
+    turns: ["今日去咗長者中心打麻雀"]
+    gold: {went_out_today: "yes", social_contact: [centre]}
+  - id: e21
+    tag: easy
+    lang: en
+    turns: ["I didn't eat lunch today", "I stayed at home all day"]
+    gold: {appetite: skipped_meals, went_out_today: "no"}
+  - id: e22
+    tag: easy
+    lang: en
+    turns: ["I slept well", "I took my pills", "I went to the park", "I feel happy"]
+    gold: {sleep: good, meds_taken: "yes", went_out_today: "yes", mood: 4}
+  - id: e23
+    tag: easy
+    lang: en
+    turns: ["I feel lonely, nobody calls me"]
+    gold: {loneliness_expressed: true, mood: 2}
+  - id: e24
+    tag: easy
+    lang: en
+    turns: ["my knee hurts quite a bit"]
+    gold: {pain: moderate}
+  - id: e25
+    tag: easy
+    lang: en
+    turns: ["my daughter called me last night"]
+    gold: {social_contact: [family_call]}
+  - id: e26
+    tag: easy
+    lang: en
+    turns: ["What day is it today?"]
+    gold: {confusion_cues: [wrong_day_or_date]}
+  - id: e27
+    tag: hard
+    lang: en
+    turns: ["I couldn't face breakfast or lunch"]
+    gold: {appetite: skipped_meals}
+  - id: e28
+    tag: hard
+    lang: en
+    turns: ["I was up half the night and barely slept"]
+    gold: {sleep: poor}
+  - id: e29
+    tag: negation
+    lang: en
+    turns: ["I haven't taken my tablets today"]
+    gold: {meds_taken: "no"}
+  - id: e30
+    tag: easy
+    lang: en
+    turns: ["I had breakfast but skipped lunch"]
+    gold: {appetite: skipped_meals}

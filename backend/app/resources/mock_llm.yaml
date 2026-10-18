@@ -1,0 +1,30 @@
+# Offline mock LLM replies (used when LLM_PROVIDER=mock). Every line has yue + en.
+# TODO: native Cantonese speaker review.
+acks:
+  - { yue: "係呀。", en: "I see." }
+  - { yue: "明白。", en: "I understand." }
+  - { yue: "好呀。", en: "That's good." }
+  - { yue: "原來係咁。", en: "Oh, is that so." }
+chat_questions:
+  - { yue: "最近有冇{interest}呀？", en: "Have you been enjoying {interest} lately?" }
+  - { yue: "今日天氣點呀？", en: "How is the weather where you are?" }
+interests_yue:  # English interest -> spoken Cantonese (mock chat only)
+  wet market: 行街市
+  grandchildren: 同孫仔孫女相處
+  Cantonese opera: 聽粵劇
+  Chinese chess: 落象棋
+  park: 去公園
+  tea: 飲茶
+  mahjong: 打麻雀
+  cooking: 煮餸
+  birds: 養雀仔
+  newspapers: 睇報紙
+  knitting: 織冷
+  old films: 睇舊電影
+  elderly centre: 去長者中心
+  table tennis: 打乒乓球
+  radio: 聽電台
+  gardening: 種花
+memory_ref:
+  yue: "我記得{fact}，係咪呀？"
+  en: "I remember: {fact}. Is that right?"

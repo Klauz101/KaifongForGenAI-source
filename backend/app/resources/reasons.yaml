@@ -1,0 +1,41 @@
+# Risk reason texts (EN + 繁體中文). {n} = number of supporting calls.
+# TODO: native Cantonese speaker must review every zh string.
+HOMEBOUND:
+  en: "Has not gone out on {n} recent calls"
+  zh: "最近 {n} 次通話都冇出過街"
+SKIPPED_MEALS:
+  en: "Skipped meals on {n} calls this week"
+  zh: "今個星期有 {n} 次通話提到冇食飯"
+PAIN_SEVERE:
+  en: "Reported severe pain in the last 3 days"
+  zh: "最近三日有講過好痛"
+MOOD_DROP:
+  en: "Mood well below their usual level"
+  zh: "心情比平時低好多"
+LONELINESS:
+  en: "Mentioned feeling lonely on {n} of the last 5 calls"
+  zh: "最近五次通話有 {n} 次講過覺得孤單"
+NEW_CONFUSION:
+  en: "New signs of confusion on {n} recent calls (repeating questions, unsure of the day)"
+  zh: "最近有 {n} 次通話出現混亂跡象（重複問題、唔記得日子）"
+LOW_DATA:
+  en: "Calls are hard to understand; check data quality"
+  zh: "通話難以聽清楚，請檢查資料質素"
+UNREACHABLE:
+  en: "Missed {n} scheduled calls in a row"
+  zh: "連續 {n} 次冇人接聽"
+POOR_SLEEP:
+  en: "Slept poorly on {n} of the last 5 calls"
+  zh: "最近五次通話有 {n} 次講過瞓得唔好"
+RED_FLAG_PHRASE:
+  en: "An emergency phrase was said on a call in the last 24 hours"
+  zh: "過去 24 小時內通話中有人講出緊急字眼"
+SHARP_CHANGE:
+  en: "Sharp change: several warning signs at once"
+  zh: "情況突然轉差：同時出現多項警示"
+MEDS_MISSED:
+  en: "Did not take all medication on {n} calls this week"
+  zh: "今個星期有 {n} 次通話提到冇食齊藥"
+OPEN_RED_ALERT:
+  en: "An urgent alert is still unresolved"
+  zh: "仍有緊急警示未處理"

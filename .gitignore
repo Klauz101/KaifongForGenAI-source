@@ -1,0 +1,39 @@
+# Local configuration and secrets.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+*.p12
+*.credentials.json
+
+# Local AI assistant instructions and private prompts.
+CLAUDE.md
+.claude/
+AGENTS.md
+INSTRUCTIONS.md
+.github/copilot-instructions.md
+*_PROMPT.md
+*PROMPT*.md
+*prompt*.md
+*.prompt.md
+*.instructions.md
+*.agent.md
+*.skill.md
+
+# Do not upload documentation or prompt Markdown files.
+*.md
+
+# Local data and runtime state.
+*.db
+data/*
+!data/.gitkeep
+backend/.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+frontend/dist/
+.DS_Store
+.node/

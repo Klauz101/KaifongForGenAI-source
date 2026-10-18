@@ -1,0 +1,46 @@
+# Wellbeing topics Kaifong weaves into the chat (max one per reply).
+# `desc` is the instruction given to the LLM; `q` is the scripted fallback question;
+# `keywords` detect when the older person already volunteered the topic.
+# TODO: native Cantonese speaker must review every yue string.
+ate_meals:
+  desc: { en: "whether they have eaten today (meals)", yue: "今日有冇食飯" }
+  q: { yue: "今日食咗飯未呀？", en: "Have you eaten yet today?" }
+  keywords:
+    yue: ["食咗", "食飯", "早餐", "午餐", "晚餐", "冇食", "未食", "飲茶", "煮"]
+    en: ["eat", "ate", "breakfast", "lunch", "dinner", "meal", "hungry"]
+sleep:
+  desc: { en: "how they slept last night", yue: "琴晚瞓得好唔好" }
+  q: { yue: "琴晚瞓得好唔好呀？", en: "Did you sleep well last night?" }
+  keywords:
+    yue: ["瞓", "訓", "失眠", "醒"]
+    en: ["sleep", "slept", "insomnia", "woke"]
+meds:
+  desc: { en: "whether they remembered their regular medication (do not advise)", yue: "有冇記得食日常嘅藥（唔好俾意見）" }
+  q: { yue: "今日有冇記得食藥呀？", en: "Did you remember to take your medicine today?" }
+  keywords:
+    yue: ["藥", "食咗藥", "覆診"]
+    en: ["medicine", "medication", "pills", "tablet"]
+pain:
+  desc: { en: "whether anything hurts or feels unwell (do not advise)", yue: "身體有冇邊度唔舒服（唔好俾意見）" }
+  q: { yue: "身體有冇邊度唔舒服呀？", en: "Is anything bothering you physically?" }
+  keywords:
+    yue: ["痛", "唔舒服", "酸", "膝頭", "頭暈"]
+    en: ["pain", "hurt", "ache", "sore", "unwell"]
+went_out:
+  desc: { en: "whether they went out of the house today", yue: "今日有冇出過街" }
+  q: { yue: "今日有冇出過街呀？", en: "Did you go out today?" }
+  keywords:
+    yue: ["出街", "落街", "出去", "公園", "行街", "買餸", "落樓下"]
+    en: ["went out", "outside", "walk", "park", "shop", "market"]
+saw_or_spoke_to_someone:
+  desc: { en: "whether they saw or spoke to family, friends or neighbours", yue: "有冇見過或者傾過偈嘅親友街坊" }
+  q: { yue: "最近有冇同屋企人或者朋友傾過偈呀？", en: "Have you spoken with family or friends lately?" }
+  keywords:
+    yue: ["朋友", "街坊", "個仔", "個女", "孫", "通電話", "打俾我", "探我"]
+    en: ["friend", "neighbour", "neighbor", "son", "daughter", "grandchild", "called me", "visited"]
+mood:
+  desc: { en: "how they are feeling in themselves today", yue: "今日心情點" }
+  q: { yue: "咁今日心情點呀？", en: "So how is your mood today?" }
+  keywords:
+    yue: ["開心", "心情", "悶", "孤單", "煩", "好靜"]
+    en: ["happy", "mood", "sad", "lonely", "bored", "feeling"]

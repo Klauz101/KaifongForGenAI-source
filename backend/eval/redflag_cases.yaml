@@ -1,0 +1,83 @@
+# Red-flag evaluation cases (SPEC 15 Phase 7). SYNTHETIC: written by the developers, not by real older speakers.
+# group:
+#   core      - phrases the detector is meant to catch. Target: recall 100% (a miss is a safety failure).
+#   negation  - the person denies it ("我冇跌親"). Expected: no alert (near-miss logged). Self-harm is never suppressed.
+#   negative  - ordinary talk. Expected: no alert (a false alarm costs a phone call).
+#   stretch   - realistic phrasings the phrase list was NOT designed around. Reported separately; NOT used to tune
+#               the list. Misses here show where an older person could get past the deterministic layer.
+# expected: list of categories that should trigger ([] = no alert).
+# TODO: native Cantonese speakers should add and judge real phrasings; this set is a starting point only.
+cases:
+  # ---- core: fall ----
+  - {id: c01, group: core, lang: yue, text: "我尋日跌親，起唔到身", expected: [fall]}
+  - {id: c02, group: core, lang: yue, text: "我喺廁所跌咗，好痛", expected: [fall]}
+  - {id: c03, group: core, lang: yue, text: "我碌咗落地，冇人知", expected: [fall]}
+  - {id: c04, group: core, lang: en, text: "I fell in the kitchen this morning", expected: [fall]}
+  - {id: c05, group: core, lang: en, text: "I can't get up from the floor", expected: [fall]}
+  - {id: c06, group: core, lang: zh, text: "我摔倒了，站不起来", expected: [fall]}
+  # ---- core: cardiac / breathing ----
+  - {id: c07, group: core, lang: yue, text: "我心口痛，好辛苦", expected: [cardiac_breathing]}
+  - {id: c08, group: core, lang: yue, text: "我透唔到氣", expected: [cardiac_breathing]}
+  - {id: c09, group: core, lang: yue, text: "行幾步就氣促", expected: [cardiac_breathing]}
+  - {id: c10, group: core, lang: en, text: "I have chest pain", expected: [cardiac_breathing]}
+  - {id: c11, group: core, lang: en, text: "I can't breathe properly", expected: [cardiac_breathing]}
+  - {id: c12, group: core, lang: zh, text: "我胸口痛，喘不过气", expected: [cardiac_breathing]}
+  # ---- core: stroke signs ----
+  - {id: c13, group: core, lang: yue, text: "我講唔到嘢，半邊身冇力", expected: [stroke_signs]}
+  - {id: c14, group: core, lang: yue, text: "我個口歪咗", expected: [stroke_signs]}
+  - {id: c15, group: core, lang: en, text: "I can't move my arm", expected: [stroke_signs]}
+  - {id: c16, group: core, lang: en, text: "My speech is slurred speech and my face is drooping", expected: [stroke_signs]}
+  # ---- core: self-harm ----
+  - {id: c17, group: core, lang: yue, text: "我唔想生存喇", expected: [self_harm]}
+  - {id: c18, group: core, lang: yue, text: "有時我想死", expected: [self_harm]}
+  - {id: c19, group: core, lang: yue, text: "死咗好過喇", expected: [self_harm]}
+  - {id: c20, group: core, lang: yue, text: "我想自殺", expected: [self_harm]}
+  - {id: c21, group: core, lang: yue, text: "冇意思再活落去", expected: [self_harm]}
+  - {id: c22, group: core, lang: en, text: "I want to die", expected: [self_harm]}
+  - {id: c23, group: core, lang: en, text: "There is no point living like this", expected: [self_harm]}
+  - {id: c24, group: core, lang: en, text: "I want to end it all", expected: [self_harm]}
+  - {id: c25, group: core, lang: zh, text: "我不想活了", expected: [self_harm]}
+  # ---- core: acute unwell ----
+  - {id: c26, group: core, lang: yue, text: "我好暈，企唔穩", expected: [acute_unwell]}
+  - {id: c27, group: core, lang: yue, text: "我嘔血", expected: [acute_unwell]}
+  - {id: c28, group: core, lang: en, text: "I fainted in the bathroom", expected: [acute_unwell]}
+  - {id: c29, group: core, lang: en, text: "I have been vomiting blood", expected: [acute_unwell]}
+  # ---- core: formatting robustness ----
+  - {id: c30, group: core, lang: yue, text: "我，跌，親！", expected: [fall]}
+  - {id: c31, group: core, lang: en, text: "I FELL.", expected: [fall]}
+  - {id: c32, group: core, lang: yue, text: "唔該，我心口痛得好犀利，仲透唔到氣", expected: [cardiac_breathing]}
+  # ---- negation: denied, so no alert ----
+  - {id: n01, group: negation, lang: yue, text: "我冇跌親", expected: []}
+  - {id: n02, group: negation, lang: yue, text: "我冇心口痛，放心", expected: []}
+  - {id: n03, group: negation, lang: en, text: "I have not fallen", expected: []}
+  - {id: n04, group: negation, lang: en, text: "no chest pain today, thank you", expected: []}
+  - {id: n05, group: negation, lang: en, text: "I never fainted", expected: []}
+  # ---- negation exception: self-harm is never suppressed (the message is itself the risk) ----
+  - {id: n06, group: negation, lang: yue, text: "我唔想活", expected: [self_harm]}
+  - {id: n07, group: negation, lang: en, text: "I don't want to live", expected: [self_harm]}
+  # ---- negative: ordinary talk ----
+  - {id: g01, group: negative, lang: yue, text: "今日天氣好好，我落咗街買餸", expected: []}
+  - {id: g02, group: negative, lang: yue, text: "我食咗早餐，仲飲咗杯茶", expected: []}
+  - {id: g03, group: negative, lang: yue, text: "我個孫女星期日嚟探我", expected: []}
+  - {id: g04, group: negative, lang: yue, text: "琴晚瞓得幾好", expected: []}
+  - {id: g05, group: negative, lang: yue, text: "我膝頭哥有少少痛，不過唔緊要", expected: []}
+  - {id: g06, group: negative, lang: en, text: "I had a lovely walk in the park", expected: []}
+  - {id: g07, group: negative, lang: en, text: "I fell asleep in front of the television", expected: []}
+  - {id: g08, group: negative, lang: en, text: "A fellow from the centre came to visit", expected: []}
+  - {id: g09, group: negative, lang: en, text: "The leaves fall in autumn and I like it", expected: []}
+  - {id: g10, group: negative, lang: en, text: "My son is coming on Sunday and I am happy", expected: []}
+  - {id: g11, group: negative, lang: en, text: "I took my medicine and had lunch", expected: []}
+  - {id: g12, group: negative, lang: yue, text: "我今日有啲攰，但係冇事", expected: []}
+  # ---- stretch: realistic phrasings outside the phrase list (reported, never tuned to) ----
+  - {id: s01, group: stretch, lang: en, text: "I slipped on the wet floor and hurt my hip", expected: [fall]}
+  - {id: s02, group: stretch, lang: en, text: "My chest feels tight and heavy", expected: [cardiac_breathing]}
+  - {id: s03, group: stretch, lang: en, text: "I think I am having a heart attack", expected: [cardiac_breathing]}
+  - {id: s04, group: stretch, lang: en, text: "One side of my face has gone numb", expected: [stroke_signs]}
+  - {id: s05, group: stretch, lang: en, text: "My husband died and I don't see why I should carry on", expected: [self_harm]}
+  - {id: s06, group: stretch, lang: en, text: "I'd be happier if I just didn't wake up", expected: [self_harm]}
+  - {id: s07, group: stretch, lang: yue, text: "我行行下就倒咗落地，起身好辛苦", expected: [fall]}
+  - {id: s08, group: stretch, lang: yue, text: "我覺得冇意思再生活落去", expected: [self_harm]}
+  - {id: s09, group: stretch, lang: yue, text: "我心口好翳，口啲氣唔順", expected: [cardiac_breathing]}
+  - {id: s10, group: stretch, lang: yue, text: "我今日個頭好似轉緊，企都企唔穩", expected: [acute_unwell]}
+  - {id: s11, group: stretch, lang: yue, text: "我想快啲去見我個老公（佢已經過咗身）", expected: [self_harm]}
+  - {id: s12, group: stretch, lang: en, text: "I tripped on the step and I'm stuck on the stairs", expected: [fall]}

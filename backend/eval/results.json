@@ -1,0 +1,1262 @@
+{
+  "generated_at": "2026-10-18T04:02:22+00:00",
+  "synthetic_note": "All evaluation data here is SYNTHETIC and was written by the developers, not by real older speakers. Scores show the software behaves as designed on these cases; they are not accuracy claims about real people.",
+  "targets": [
+    {
+      "name": "Red-flag recall on core phrases",
+      "target": "100%",
+      "value": "100.0%",
+      "met": true
+    },
+    {
+      "name": "Extraction agreement with gold",
+      "target": ">= 85%",
+      "value": "96.7%",
+      "met": true
+    },
+    {
+      "name": "Median reply latency",
+      "target": "< 3000 ms",
+      "value": "not yet measured",
+      "met": null
+    }
+  ],
+  "redflags": {
+    "cases_total": 63,
+    "counts": {
+      "core": 32,
+      "negation": 7,
+      "negative": 12,
+      "stretch": 12
+    },
+    "negatives_total": 19,
+    "core_recall_pct": 100.0,
+    "core_category_accuracy_pct": 100.0,
+    "core_recall_by_category": {
+      "acute_unwell": 100.0,
+      "cardiac_breathing": 100.0,
+      "fall": 100.0,
+      "self_harm": 100.0,
+      "stroke_signs": 100.0
+    },
+    "core_recall_by_language": {
+      "en": 100.0,
+      "yue": 100.0,
+      "zh": 100.0
+    },
+    "precision_pct": 100.0,
+    "recall_pct": 100.0,
+    "negatives_correct_pct": 100.0,
+    "false_alarms": [],
+    "core_misses": [],
+    "stretch_recall_pct": 8.3,
+    "stretch_misses": [
+      {
+        "id": "s01",
+        "text": "I slipped on the wet floor and hurt my hip",
+        "expected": [
+          "fall"
+        ]
+      },
+      {
+        "id": "s02",
+        "text": "My chest feels tight and heavy",
+        "expected": [
+          "cardiac_breathing"
+        ]
+      },
+      {
+        "id": "s04",
+        "text": "One side of my face has gone numb",
+        "expected": [
+          "stroke_signs"
+        ]
+      },
+      {
+        "id": "s05",
+        "text": "My husband died and I don't see why I should carry on",
+        "expected": [
+          "self_harm"
+        ]
+      },
+      {
+        "id": "s06",
+        "text": "I'd be happier if I just didn't wake up",
+        "expected": [
+          "self_harm"
+        ]
+      },
+      {
+        "id": "s07",
+        "text": "我行行下就倒咗落地，起身好辛苦",
+        "expected": [
+          "fall"
+        ]
+      },
+      {
+        "id": "s08",
+        "text": "我覺得冇意思再生活落去",
+        "expected": [
+          "self_harm"
+        ]
+      },
+      {
+        "id": "s09",
+        "text": "我心口好翳，口啲氣唔順",
+        "expected": [
+          "cardiac_breathing"
+        ]
+      },
+      {
+        "id": "s10",
+        "text": "我今日個頭好似轉緊，企都企唔穩",
+        "expected": [
+          "acute_unwell"
+        ]
+      },
+      {
+        "id": "s11",
+        "text": "我想快啲去見我個老公（佢已經過咗身）",
+        "expected": [
+          "self_harm"
+        ]
+      },
+      {
+        "id": "s12",
+        "text": "I tripped on the step and I'm stuck on the stairs",
+        "expected": [
+          "fall"
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "id": "c01",
+        "group": "core",
+        "lang": "yue",
+        "text": "我尋日跌親，起唔到身",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c02",
+        "group": "core",
+        "lang": "yue",
+        "text": "我喺廁所跌咗，好痛",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c03",
+        "group": "core",
+        "lang": "yue",
+        "text": "我碌咗落地，冇人知",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c04",
+        "group": "core",
+        "lang": "en",
+        "text": "I fell in the kitchen this morning",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c05",
+        "group": "core",
+        "lang": "en",
+        "text": "I can't get up from the floor",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c06",
+        "group": "core",
+        "lang": "zh",
+        "text": "我摔倒了，站不起来",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c07",
+        "group": "core",
+        "lang": "yue",
+        "text": "我心口痛，好辛苦",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c08",
+        "group": "core",
+        "lang": "yue",
+        "text": "我透唔到氣",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c09",
+        "group": "core",
+        "lang": "yue",
+        "text": "行幾步就氣促",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c10",
+        "group": "core",
+        "lang": "en",
+        "text": "I have chest pain",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c11",
+        "group": "core",
+        "lang": "en",
+        "text": "I can't breathe properly",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c12",
+        "group": "core",
+        "lang": "zh",
+        "text": "我胸口痛，喘不过气",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c13",
+        "group": "core",
+        "lang": "yue",
+        "text": "我講唔到嘢，半邊身冇力",
+        "expected": [
+          "stroke_signs"
+        ],
+        "predicted": [
+          "stroke_signs"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c14",
+        "group": "core",
+        "lang": "yue",
+        "text": "我個口歪咗",
+        "expected": [
+          "stroke_signs"
+        ],
+        "predicted": [
+          "stroke_signs"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c15",
+        "group": "core",
+        "lang": "en",
+        "text": "I can't move my arm",
+        "expected": [
+          "stroke_signs"
+        ],
+        "predicted": [
+          "stroke_signs"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c16",
+        "group": "core",
+        "lang": "en",
+        "text": "My speech is slurred speech and my face is drooping",
+        "expected": [
+          "stroke_signs"
+        ],
+        "predicted": [
+          "stroke_signs"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c17",
+        "group": "core",
+        "lang": "yue",
+        "text": "我唔想生存喇",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c18",
+        "group": "core",
+        "lang": "yue",
+        "text": "有時我想死",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c19",
+        "group": "core",
+        "lang": "yue",
+        "text": "死咗好過喇",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c20",
+        "group": "core",
+        "lang": "yue",
+        "text": "我想自殺",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c21",
+        "group": "core",
+        "lang": "yue",
+        "text": "冇意思再活落去",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c22",
+        "group": "core",
+        "lang": "en",
+        "text": "I want to die",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c23",
+        "group": "core",
+        "lang": "en",
+        "text": "There is no point living like this",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c24",
+        "group": "core",
+        "lang": "en",
+        "text": "I want to end it all",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c25",
+        "group": "core",
+        "lang": "zh",
+        "text": "我不想活了",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c26",
+        "group": "core",
+        "lang": "yue",
+        "text": "我好暈，企唔穩",
+        "expected": [
+          "acute_unwell"
+        ],
+        "predicted": [
+          "acute_unwell"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c27",
+        "group": "core",
+        "lang": "yue",
+        "text": "我嘔血",
+        "expected": [
+          "acute_unwell"
+        ],
+        "predicted": [
+          "acute_unwell"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c28",
+        "group": "core",
+        "lang": "en",
+        "text": "I fainted in the bathroom",
+        "expected": [
+          "acute_unwell"
+        ],
+        "predicted": [
+          "acute_unwell"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c29",
+        "group": "core",
+        "lang": "en",
+        "text": "I have been vomiting blood",
+        "expected": [
+          "acute_unwell"
+        ],
+        "predicted": [
+          "acute_unwell"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c30",
+        "group": "core",
+        "lang": "yue",
+        "text": "我，跌，親！",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c31",
+        "group": "core",
+        "lang": "en",
+        "text": "I FELL.",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [
+          "fall"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "c32",
+        "group": "core",
+        "lang": "yue",
+        "text": "唔該，我心口痛得好犀利，仲透唔到氣",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n01",
+        "group": "negation",
+        "lang": "yue",
+        "text": "我冇跌親",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n02",
+        "group": "negation",
+        "lang": "yue",
+        "text": "我冇心口痛，放心",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n03",
+        "group": "negation",
+        "lang": "en",
+        "text": "I have not fallen",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n04",
+        "group": "negation",
+        "lang": "en",
+        "text": "no chest pain today, thank you",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n05",
+        "group": "negation",
+        "lang": "en",
+        "text": "I never fainted",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n06",
+        "group": "negation",
+        "lang": "yue",
+        "text": "我唔想活",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "n07",
+        "group": "negation",
+        "lang": "en",
+        "text": "I don't want to live",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [
+          "self_harm"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g01",
+        "group": "negative",
+        "lang": "yue",
+        "text": "今日天氣好好，我落咗街買餸",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g02",
+        "group": "negative",
+        "lang": "yue",
+        "text": "我食咗早餐，仲飲咗杯茶",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g03",
+        "group": "negative",
+        "lang": "yue",
+        "text": "我個孫女星期日嚟探我",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g04",
+        "group": "negative",
+        "lang": "yue",
+        "text": "琴晚瞓得幾好",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g05",
+        "group": "negative",
+        "lang": "yue",
+        "text": "我膝頭哥有少少痛，不過唔緊要",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g06",
+        "group": "negative",
+        "lang": "en",
+        "text": "I had a lovely walk in the park",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g07",
+        "group": "negative",
+        "lang": "en",
+        "text": "I fell asleep in front of the television",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g08",
+        "group": "negative",
+        "lang": "en",
+        "text": "A fellow from the centre came to visit",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g09",
+        "group": "negative",
+        "lang": "en",
+        "text": "The leaves fall in autumn and I like it",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g10",
+        "group": "negative",
+        "lang": "en",
+        "text": "My son is coming on Sunday and I am happy",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g11",
+        "group": "negative",
+        "lang": "en",
+        "text": "I took my medicine and had lunch",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "g12",
+        "group": "negative",
+        "lang": "yue",
+        "text": "我今日有啲攰，但係冇事",
+        "expected": [],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "s01",
+        "group": "stretch",
+        "lang": "en",
+        "text": "I slipped on the wet floor and hurt my hip",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s02",
+        "group": "stretch",
+        "lang": "en",
+        "text": "My chest feels tight and heavy",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s03",
+        "group": "stretch",
+        "lang": "en",
+        "text": "I think I am having a heart attack",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [
+          "cardiac_breathing"
+        ],
+        "alerted": true,
+        "alert_ok": true,
+        "category_ok": true
+      },
+      {
+        "id": "s04",
+        "group": "stretch",
+        "lang": "en",
+        "text": "One side of my face has gone numb",
+        "expected": [
+          "stroke_signs"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s05",
+        "group": "stretch",
+        "lang": "en",
+        "text": "My husband died and I don't see why I should carry on",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s06",
+        "group": "stretch",
+        "lang": "en",
+        "text": "I'd be happier if I just didn't wake up",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s07",
+        "group": "stretch",
+        "lang": "yue",
+        "text": "我行行下就倒咗落地，起身好辛苦",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s08",
+        "group": "stretch",
+        "lang": "yue",
+        "text": "我覺得冇意思再生活落去",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s09",
+        "group": "stretch",
+        "lang": "yue",
+        "text": "我心口好翳，口啲氣唔順",
+        "expected": [
+          "cardiac_breathing"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s10",
+        "group": "stretch",
+        "lang": "yue",
+        "text": "我今日個頭好似轉緊，企都企唔穩",
+        "expected": [
+          "acute_unwell"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s11",
+        "group": "stretch",
+        "lang": "yue",
+        "text": "我想快啲去見我個老公（佢已經過咗身）",
+        "expected": [
+          "self_harm"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      },
+      {
+        "id": "s12",
+        "group": "stretch",
+        "lang": "en",
+        "text": "I tripped on the step and I'm stuck on the stairs",
+        "expected": [
+          "fall"
+        ],
+        "predicted": [],
+        "alerted": false,
+        "alert_ok": false,
+        "category_ok": false
+      }
+    ]
+  },
+  "extraction": {
+    "provider": "mock",
+    "model": "rules (offline)",
+    "cases": 30,
+    "fields_per_case": 9,
+    "agreement_pct": 96.7,
+    "by_field_pct": {
+      "mood": 96.7,
+      "sleep": 93.3,
+      "appetite": 93.3,
+      "meds_taken": 100.0,
+      "pain": 100.0,
+      "went_out_today": 93.3,
+      "social_contact": 96.7,
+      "loneliness_expressed": 96.7,
+      "confusion_cues": 100.0
+    },
+    "by_tag_pct": {
+      "easy": 100.0,
+      "hard": 85.7,
+      "negation": 100.0
+    },
+    "by_language_pct": {
+      "en": 97.8,
+      "yue": 96.1
+    },
+    "unsupported_values": 1,
+    "unsupported_value_note": "fields filled in when the person said nothing about them",
+    "evidence_valid_pct": 100.0,
+    "disagreements": [
+      {
+        "case": "e13",
+        "tag": "hard",
+        "field": "appetite",
+        "gold": "skipped_meals",
+        "predicted": "unknown",
+        "text": "朝早只係飲咗杯水，其他乜都食唔落"
+      },
+      {
+        "case": "e14",
+        "tag": "hard",
+        "field": "sleep",
+        "gold": "poor",
+        "predicted": "unknown",
+        "text": "琴晚成晚冇點瞓"
+      },
+      {
+        "case": "e15",
+        "tag": "hard",
+        "field": "went_out_today",
+        "gold": "no",
+        "predicted": "unknown",
+        "text": "今日冇落過樓"
+      },
+      {
+        "case": "e16",
+        "tag": "hard",
+        "field": "mood",
+        "gold": 2,
+        "predicted": null,
+        "text": "好掛住我個女，佢喺外國，好耐冇見"
+      },
+      {
+        "case": "e16",
+        "tag": "hard",
+        "field": "social_contact",
+        "gold": [
+          "none_mentioned"
+        ],
+        "predicted": [
+          "family_call"
+        ],
+        "text": "好掛住我個女，佢喺外國，好耐冇見"
+      },
+      {
+        "case": "e16",
+        "tag": "hard",
+        "field": "loneliness_expressed",
+        "gold": true,
+        "predicted": false,
+        "text": "好掛住我個女，佢喺外國，好耐冇見"
+      },
+      {
+        "case": "e20",
+        "tag": "hard",
+        "field": "went_out_today",
+        "gold": "yes",
+        "predicted": "unknown",
+        "text": "今日去咗長者中心打麻雀"
+      },
+      {
+        "case": "e27",
+        "tag": "hard",
+        "field": "appetite",
+        "gold": "skipped_meals",
+        "predicted": "unknown",
+        "text": "I couldn't face breakfast or lunch"
+      },
+      {
+        "case": "e28",
+        "tag": "hard",
+        "field": "sleep",
+        "gold": "poor",
+        "predicted": "unknown",
+        "text": "I was up half the night and barely slept"
+      }
+    ]
+  },
+  "triage": {
+    "correct": 10,
+    "total": 10,
+    "summary": "10/10 correct",
+    "agreed_by_team": false,
+    "disagreements": [],
+    "rows": [
+      {
+        "id": "t01",
+        "title": "Stable for three weeks",
+        "expected": "green",
+        "got": "green",
+        "correct": true,
+        "reasons": [],
+        "debated": false,
+        "rationale": "Nothing unusual compared with how they normally are."
+      },
+      {
+        "id": "t02",
+        "title": "Skipped meals on two days this week",
+        "expected": "amber",
+        "got": "amber",
+        "correct": true,
+        "reasons": [
+          "SKIPPED_MEALS"
+        ],
+        "debated": false,
+        "rationale": "Eating less twice in a week is worth a follow-up this week, not an emergency."
+      },
+      {
+        "id": "t03",
+        "title": "Normally goes out daily, but has not left home for five days",
+        "expected": "amber",
+        "got": "amber",
+        "correct": true,
+        "reasons": [
+          "HOMEBOUND"
+        ],
+        "debated": false,
+        "rationale": "A change from their own routine: someone should check in this week."
+      },
+      {
+        "id": "t04",
+        "title": "Did not answer the last two scheduled calls",
+        "expected": "red",
+        "got": "red",
+        "correct": true,
+        "reasons": [
+          "UNREACHABLE"
+        ],
+        "debated": false,
+        "rationale": "Two missed calls in a row could mean a fall or illness: act now."
+      },
+      {
+        "id": "t05",
+        "title": "Very low mood (1 of 5) on the last two calls",
+        "expected": "red",
+        "got": "red",
+        "correct": true,
+        "reasons": [
+          "SHARP_CHANGE",
+          "MOOD_DROP"
+        ],
+        "debated": false,
+        "rationale": "Sustained very low mood needs a person now."
+      },
+      {
+        "id": "t06",
+        "title": "Slept badly on three of the last five nights",
+        "expected": "amber",
+        "got": "amber",
+        "correct": true,
+        "reasons": [
+          "POOR_SLEEP"
+        ],
+        "debated": false,
+        "rationale": "A new sleep problem: follow up this week."
+      },
+      {
+        "id": "t07",
+        "title": "Has always slept badly (every call for three weeks)",
+        "expected": "green",
+        "got": "green",
+        "correct": true,
+        "reasons": [],
+        "debated": true,
+        "rationale": "Poor sleep is their normal, so it is not a change. (Some social workers would still want to ask about it.)"
+      },
+      {
+        "id": "t08",
+        "title": "Repeated a question or lost track of the day on three of the last five calls (never before)",
+        "expected": "amber",
+        "got": "amber",
+        "correct": true,
+        "reasons": [
+          "NEW_CONFUSION"
+        ],
+        "debated": false,
+        "rationale": "New signs of confusion deserve a visit this week."
+      },
+      {
+        "id": "t09",
+        "title": "Reported severe pain yesterday",
+        "expected": "amber",
+        "got": "amber",
+        "correct": true,
+        "reasons": [
+          "PAIN_SEVERE"
+        ],
+        "debated": true,
+        "rationale": "Severe pain should be looked at soon; some would call it urgent (Red) if it continued."
+      },
+      {
+        "id": "t10",
+        "title": "Several warning signs at once: skipped meals, missed medicine, not going out, severe pain",
+        "expected": "red",
+        "got": "red",
+        "correct": true,
+        "reasons": [
+          "SHARP_CHANGE",
+          "PAIN_SEVERE",
+          "HOMEBOUND",
+          "SKIPPED_MEALS",
+          "MEDS_MISSED"
+        ],
+        "debated": false,
+        "rationale": "A sharp change across many areas: act now."
+      }
+    ]
+  },
+  "stt": {
+    "provider": "mock",
+    "clips": 0,
+    "status": "not yet measured",
+    "cer_pct": null,
+    "per_clip": [],
+    "errors": [],
+    "note": "No clips yet: add consented recordings (see eval/stt_eval/README.md)."
+  },
+  "live": {
+    "providers": {
+      "stt": "mock",
+      "tts": "mock",
+      "llm": "mock",
+      "translate": "mock"
+    },
+    "mock_only": true,
+    "latency": {
+      "count": 0,
+      "median_ms": null,
+      "mean_ms": null,
+      "p90_ms": null
+    },
+    "cost": {
+      "currency": "HKD",
+      "calls_measured": 0,
+      "calls_priced": 0,
+      "avg_cost_per_call": null,
+      "est_monthly_per_person": null,
+      "calls_per_month": 30,
+      "missing_prices": [],
+      "status": "not yet measured"
+    }
+  }
+}

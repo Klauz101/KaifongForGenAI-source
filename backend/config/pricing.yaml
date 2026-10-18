@@ -1,0 +1,12 @@
+# Unit prices used for cost estimates (SPEC 9.3). The team fills these from each vendor's price page.
+# Until a price is filled in, any cost that needs it is reported as "not yet measured": Kaifong never
+# prints a number it did not measure. Write each price with its source and date, e.g.
+#   stt_per_minute: 0.12   # source: <vendor price page URL>, <date>
+currency: HKD
+calls_per_month: 30            # monthly estimate = average cost per call x this
+prices:
+  stt_per_minute: null           # speech-to-text, per audio minute          # source + date
+  tts_per_1k_chars: null         # text-to-speech, per 1,000 characters      # source + date
+  llm_input_per_1m_tokens: null  # chat + extraction + translation, input    # source + date
+  llm_output_per_1m_tokens: null # chat + extraction + translation, output   # source + date
+  telephony_per_minute: null     # outbound phone minute (if telephony used)  # source + date

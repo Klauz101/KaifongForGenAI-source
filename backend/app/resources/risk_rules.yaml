@@ -1,0 +1,30 @@
+# Risk rule thresholds (SPEC 9.1). Tunable; everything is evaluated on the elder's own history.
+window_days: 14                    # rules look at the last 14 days of calls
+baseline:
+  from_days_ago: 7                 # personal baseline = days 8-21 before the assessment date
+  to_days_ago: 20
+  min_calls: 5                     # fewer completed calls than this -> population defaults
+defaults:                          # population defaults used when the personal baseline is too thin
+  mood_median: 4
+  sleep_mode: good
+  went_out_rate: 0.7
+  confusion_calls: 0
+sharp_change:
+  # SPEC conflict: 9.1 says 3 Amber rules -> Red, but Section 12 wants Mrs Chan Amber with 3 reasons.
+  # Default 4 satisfies both; the team can lower it here.
+  amber_rules_count: 4
+  mood_le: 1
+  consecutive_calls: 2
+poor_sleep: { of_last: 5, min: 3 }
+mood_drop: { points: 2, of_last: 3, min: 2 }
+homebound: { consecutive_calls: 4, baseline_going_out_rate_min: 0.5 }
+skipped_meals: { days: 7, min: 2 }
+meds_missed: { days: 7, min: 2 }
+pain_severe: { days: 3, min: 1 }
+loneliness: { of_last: 5, min: 3 }
+new_confusion: { of_last: 5, min: 2 }
+low_data: { of_last: 5, min: 3 }
+unreachable: { consecutive_calls: 2 }
+# count_resolved: false = once a human resolves the alert (outcome + note), it stops forcing Red.
+# SPEC 9.1 literally says "any red-flag alert in the last 24 h"; set true for that stricter behaviour.
+red_flag_phrase: { hours: 24, count_resolved: false }

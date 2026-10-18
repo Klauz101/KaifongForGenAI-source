@@ -1,0 +1,4 @@
+# Numbers only humans can supply. `make deck-numbers` copies them verbatim and labels them as manual entries;
+# it NEVER fills them in itself. Leave null until you have the real figure.
+users_tested: null        # how many real people (older adults / social workers) used the prototype, e.g. 6
+users_tested_note: ""     # who they were and how it was tested, e.g. "3 social workers, 3 volunteers at a centre"

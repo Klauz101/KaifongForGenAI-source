@@ -1,0 +1,11 @@
+{
+  "_note": "SAMPLE DATA ONLY. Every entry is a placeholder with verified=false and a fake address/phone. TODO: replace with real data from the Social Welfare Department's elderly centre list and verify each entry before the demo. Kaifong never names a centre or activity to an older person unless verified=true.",
+  "resources": [
+    {"name": "Sample Kwun Tong Elderly Centre A", "name_zh": "示範觀塘長者中心甲", "type": "DECC", "district": "Kwun Tong", "address": "PLACEHOLDER ADDRESS A", "phone": "XXXX XXXX", "activities": ["Chinese chess", "tea gathering", "tai chi"], "schedule_text": "Placeholder schedule", "verified": false},
+    {"name": "Sample Kwun Tong Elderly Centre B", "name_zh": "示範觀塘長者中心乙", "type": "NEC", "district": "Kwun Tong", "address": "PLACEHOLDER ADDRESS B", "phone": "XXXX XXXX", "activities": ["knitting", "Cantonese opera", "table tennis"], "schedule_text": "Placeholder schedule", "verified": false},
+    {"name": "Sample Kwun Tong Neighbourhood Group C", "name_zh": "示範觀塘鄰舍小組丙", "type": "activity", "district": "Kwun Tong", "address": "PLACEHOLDER ADDRESS C", "phone": "XXXX XXXX", "activities": ["walking group", "gardening", "cooking"], "schedule_text": "Placeholder schedule", "verified": false},
+    {"name": "Sample Kwun Tong Elderly Centre D", "name_zh": "示範觀塘長者中心丁", "type": "DECC", "district": "Kwun Tong", "address": "PLACEHOLDER ADDRESS D", "phone": "XXXX XXXX", "activities": ["mahjong", "old films", "radio club"], "schedule_text": "Placeholder schedule", "verified": false},
+    {"name": "Sample Kwun Tong Social Club E", "name_zh": "示範觀塘長者聚會點戊", "type": "activity", "district": "Kwun Tong", "address": "PLACEHOLDER ADDRESS E", "phone": "XXXX XXXX", "activities": ["singing", "birds", "newspapers"], "schedule_text": "Placeholder schedule", "verified": false},
+    {"name": "Sample Support Hotline F", "name_zh": "示範支援熱線己", "type": "hotline", "district": "Kwun Tong", "address": "n/a", "phone": "XXXX XXXX", "activities": [], "schedule_text": "Placeholder", "verified": false}
+  ]
+}

@@ -1,0 +1,38 @@
+# Gentle suggestions toward real people (SPEC 9.2). One per call. TODO: native Cantonese review.
+# A centre/activity is only ever named when the resource is verified; otherwise Kaifong offers to ask
+# the social worker, so it never claims something unconfirmed exists.
+go_outside:
+  yue: "今日天氣好，落樓下行下好唔好呀？"
+  en: "The weather is nice. Shall we go for a short walk downstairs?"
+call_family:
+  yue: "不如打俾屋企人傾下偈呀？佢哋一定好掛住你。"
+  en: "Maybe give your family a call for a chat? They are surely missing you."
+meet_friend:
+  yue: "約個朋友或者街坊飲杯茶好唔好呀？"
+  en: "How about having tea with a friend or neighbour?"
+centre_activity:
+  unverified:
+    yue: "你鍾意{activity}，不如我叫你嘅社工幫你問下附近長者中心有冇相關活動呀？"
+    en: "You enjoy {activity}. Shall I ask your social worker to find out whether a nearby centre has something like it?"
+  verified:
+    yue: "附近嘅{centre}有{activity}，有冇興趣去睇下呀？"
+    en: "{centre} nearby has {activity}. Would you like to go and have a look?"
+  generic:
+    yue: "不如我叫你嘅社工幫你問下附近長者中心有咩活動呀？"
+    en: "Shall I ask your social worker what activities a nearby centre has?"
+activities_yue:
+  Chinese chess: 象棋
+  tea gathering: 飲茶聚會
+  tai chi: 打太極
+  knitting: 織冷
+  Cantonese opera: 粵劇
+  table tennis: 乒乓球
+  walking group: 行山行街小組
+  gardening: 種花
+  cooking: 煮餸
+  mahjong: 麻雀
+  old films: 舊電影
+  radio club: 電台俱樂部
+  singing: 唱歌
+  birds: 雀仔
+  newspapers: 睇報紙

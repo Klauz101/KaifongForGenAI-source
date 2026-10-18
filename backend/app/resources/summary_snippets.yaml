@@ -1,0 +1,31 @@
+# Building blocks for seed call summaries. TODO: native speaker review of yue.
+stable:
+  en: "Chatted happily and nothing of concern came up."
+  yue: "傾得開心，冇特別需要關注嘅事。"
+skipped_meals:
+  en: "Mentioned skipping a meal."
+  yue: "提到有餐冇食。"
+homebound:
+  en: "Did not go out today."
+  yue: "今日冇出過街。"
+pain:
+  en: "Reported pain ({loc})."
+  yue: "講到{loc_yue}痛。"
+poor_sleep:
+  en: "Slept poorly."
+  yue: "瞓得唔好。"
+lonely:
+  en: "Said they feel lonely."
+  yue: "講到覺得孤單。"
+confusion:
+  en: "Repeated a question and was unsure of the day."
+  yue: "重複問過同一條問題，同埋唔肯定今日係星期幾。"
+low_mood:
+  en: "Mood seemed low."
+  yue: "心情好似唔係幾好。"
+meds_missed:
+  en: "Did not take all medication."
+  yue: "有啲藥冇食。"
+hard_to_hear:
+  en: "The line was hard to hear; most answers could not be understood."
+  yue: "線路難以聽清楚，大部分回答聽唔明。"

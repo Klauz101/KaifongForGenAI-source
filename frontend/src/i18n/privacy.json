@@ -1,0 +1,48 @@
+{
+  "en": {
+    "title": "How Kaifong looks after your information",
+    "sections": [
+      {"h": "What Kaifong is", "p": [
+        "Kaifong is an AI helper from your care organisation. It phones you for a short, friendly chat each day. It is an AI, not a person, and it always says so.",
+        "A real social worker looks after you. Kaifong helps them notice when you might like a visit or a call, and it never makes decisions about your care."]},
+      {"h": "What we keep", "p": [
+        "Only what we need: your name and phone number, your age and district, what you like to talk about, and what you say on the calls, turned into short notes about how you are doing (sleep, meals, going out, mood, who you spoke to).",
+        "We do not keep recordings of your voice. Audio is used to understand you and then thrown away."]},
+      {"h": "Who can see it", "p": [
+        "Your social worker and the care team. Family members you agreed to can see only a short weekly summary, never what was said on a call.",
+        "We never sell your information, use it for advertising, or share it with anyone else."]},
+      {"h": "How the AI is used", "p": [
+        "Before any text goes to an AI service, your name, phone number, ID number and address are removed.",
+        "If you say something that sounds like an emergency, Kaifong follows a fixed script and tells your social worker straight away. The AI cannot turn this off."]},
+      {"h": "How long we keep it", "p": [
+        "Call notes are deleted after the period you agreed to (never more than 180 days). If you stop the service, your information is deleted after a short waiting period."]},
+      {"h": "Your choices", "p": [
+        "You can stop the calls at any time: tell Kaifong, or tell your social worker. Your social worker will come to talk with you and record your choice.",
+        "You can ask to see everything we hold about you, ask us to correct it, or ask us to delete it. Speak to your social worker.",
+        "This follows Hong Kong's Personal Data (Privacy) Ordinance. You can also contact the Office of the Privacy Commissioner for Personal Data."]}
+    ]
+  },
+  "zh": {
+    "title": "街坊點樣保護你嘅個人資料",
+    "sections": [
+      {"h": "街坊係咩", "p": [
+        "街坊係你嘅護老機構嘅AI小幫手，每日會打電話同你傾幾分鐘偈。佢係AI，唔係真人，而且一定會話俾你知。",
+        "照顧你嘅係真人社工。街坊幫社工留意你幾時需要有人探下或者打個電話，但永遠唔會決定你嘅照顧安排。"]},
+      {"h": "我哋儲存啲乜", "p": [
+        "只儲存必要嘅資料：你嘅姓名同電話、年齡同地區、你鍾意傾啲乜，以及你喺通話入面講嘅嘢，整理成簡短筆記（瞓得好唔好、食飯、有冇出街、心情、同邊個傾過偈）。",
+        "我哋唔會保留你嘅聲音錄音。聲音只用嚟聽明你講乜，之後就會刪除。"]},
+      {"h": "邊個睇到", "p": [
+        "你嘅社工同照顧團隊。你同意嘅家人只會睇到一份簡短嘅每週摘要，永遠睇唔到通話內容。",
+        "我哋唔會賣你嘅資料、用嚟做廣告，或者俾其他人。"]},
+      {"h": "AI點樣使用", "p": [
+        "文字傳送去AI服務之前，你嘅姓名、電話、身份證號碼同地址都會先刪走。",
+        "如果你講到好似緊急嘅事，街坊會跟固定嘅說話回應，同時即刻通知你嘅社工。AI冇辦法關掉呢個安排。"]},
+      {"h": "儲存幾耐", "p": [
+        "通話筆記會喺你同意嘅期限後刪除（最長 180 日）。如果你唔再使用服務，我哋會喺一段短時間之後刪除你嘅資料。"]},
+      {"h": "你嘅選擇", "p": [
+        "你可以隨時停止通話：話俾街坊或者你嘅社工知。社工會親自上嚟同你傾，並記錄你嘅決定。",
+        "你可以要求睇我哋儲存咗你嘅所有資料、更正，或者刪除。請搵你嘅社工。",
+        "我哋遵守香港《個人資料（私隱）條例》。你亦可以聯絡個人資料私隱專員公署。"]}
+    ]
+  }
+}

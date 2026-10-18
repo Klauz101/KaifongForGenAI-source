@@ -1,0 +1,53 @@
+# Deterministic red-flag phrases (SPEC 8.1). Cantonese + English + Mandarin/simplified variants.
+# Matching ignores spaces and punctuation. Err toward triggering: a false alarm costs a phone call,
+# a miss can cost a life. TODO: native Cantonese speaker must review every phrase (add what real
+# older people actually say) before the pitch.
+categories:
+  fall:
+    label: { en: "possible fall", zh: "可能跌倒" }
+    suppress_on_negation: true
+    yue: ["跌親", "跌倒", "跌咗", "跌低", "碌咗落地", "起唔到身", "企唔起", "扶唔到自己", "瞓喺地下起唔到"]
+    zh: ["摔倒", "摔了一跤", "摔了", "起不来", "站不起来"]
+    en: ["fell", "fallen", "had a fall", "i fell", "cant get up", "cant stand up", "cant get off the floor", "lying on the floor", "fall down", "fall over", "falling over", "keep falling"]
+  cardiac_breathing:
+    label: { en: "chest pain or breathing difficulty", zh: "心口痛或呼吸困難" }
+    suppress_on_negation: true
+    yue: ["心口痛", "心口翳", "心翳", "透唔到氣", "抖唔到氣", "唔夠氣", "氣促", "心口好緊"]
+    zh: ["胸口痛", "胸痛", "喘不过气", "呼吸困难", "透不过气"]
+    en: ["chest pain", "pain in my chest", "cant breathe", "cannot breathe", "short of breath", "hard to breathe", "tight chest", "heart attack"]
+  stroke_signs:
+    label: { en: "possible stroke signs", zh: "可能有中風徵狀" }
+    suppress_on_negation: true
+    yue: ["講唔到嘢", "講嘢唔清", "半邊身冇力", "半邊面", "口歪", "手郁唔到", "腳郁唔到", "半邊身麻"]
+    zh: ["说不出话", "半边身体没力", "嘴歪", "半边身麻", "手动不了"]
+    en: ["face drooping", "cant move my arm", "cant move my leg", "slurred speech", "cant speak", "numb on one side", "one side of my body"]
+  self_harm:
+    label: { en: "talk of ending their life", zh: "有輕生念頭" }
+    suppress_on_negation: false      # never suppressed: "I don't want to live" is the message itself
+    yue: ["唔想生存", "唔想活", "唔想再活", "想死", "死咗好過", "自殺", "了結", "冇意思再活", "活唔落去", "冇啖好食咗好似", "唔想存在"]
+    zh: ["不想活", "不想活了", "想死", "自杀", "活不下去", "死了算了", "没意思再活"]
+    en: ["want to die", "wish i was dead", "wish i were dead", "kill myself", "no point living", "no point in living", "end it all", "end my life", "better off dead", "dont want to live", "dont want to be here anymore"]
+  acute_unwell:
+    label: { en: "acute illness (fainting, vomiting blood...)", zh: "急性不適（暈倒、嘔血等）" }
+    suppress_on_negation: true
+    yue: ["好暈", "暈低", "暈咗", "嘔血", "吐血", "屙血", "見紅", "暈到企唔穩"]
+    zh: ["很晕", "晕倒", "呕血", "吐血", "便血"]
+    en: ["fainted", "passed out", "vomiting blood", "coughing blood", "blood in my stool", "very dizzy", "feel faint"]
+# Harmless idioms removed from English text before matching ("fell asleep" is not a fall).
+en_exceptions: ["fell asleep", "fall asleep", "fallen asleep", "falling asleep", "fell in love", "fell behind"]
+# Priority when several categories hit in one utterance (first wins for the spoken reply).
+priority: [self_harm, cardiac_breathing, stroke_signs, fall, acute_unwell]
+# Words that negate a phrase right before it ("我冇跌親", "I did not fall").
+negators:
+  cjk: ["冇", "沒", "没", "無", "未", "唔", "不", "別"]
+  en: ["not", "never", "no", "dont", "didnt", "havent", "hasnt", "wasnt", "isnt", "wont", "without"]
+negation_window: { cjk_chars: 2, en_words: 2 }
+# Asking to stop the daily calls (SPEC 8.3). Handled separately from emergencies.
+opt_out:
+  yue: ["唔使再打嚟", "唔好再打嚟", "唔想再傾", "唔想你哋再打", "以後唔好打", "唔要再打", "唔想再接電話", "唔使再打"]
+  zh: ["不要再打来", "别再打来", "不想再聊", "不用再打"]
+  en: ["stop calling", "dont call me", "do not call me", "no more calls", "stop the calls", "dont want these calls", "dont call again", "please stop calling"]
+# Used to read a confirmation answer after an opt-out request.
+declines_optout:
+  yue: ["唔係", "唔好", "咪住", "我改變主意", "繼續打", "照打"]
+  en: ["no", "not really", "i changed my mind", "keep calling", "never mind", "i didnt mean"]

@@ -1,0 +1,8 @@
+# Colloquial Hong Kong Cantonese preferred when converting typed Jyutping to characters (app/jyutping.py).
+# Corpora favour standard-Chinese characters (even the spoken one writes 仲 as 重), so the core spoken characters
+# and everyday words are listed here and always win. TODO: native Cantonese speaker should review and extend.
+chars: "仲嘅咗喺俾嚟啲嘢唔冇佢哋咁嗰呢乜點係咩啦喇㗎喎囉噃嘛啱瞓睇攰唞嘥晒諗講話"
+words: [尋日, 琴日, 聽日, 今日, 前日, 朝早, 晏晝, 夜晚, 屋企, 街市, 公園, 行街, 落街, 出街, 食飯, 食藥, 瞓覺, 飲茶, 早餐, 午餐, 晚餐,
+  醫生, 護士, 社工, 長者中心, 孫女, 孫仔, 個仔, 個女, 老公, 老婆, 朋友, 街坊, 邊度, 咩事, 點解, 唔該, 多謝, 唔緊要, 冇事,
+  唔舒服, 好攰, 好悶, 開心, 孤單, 頭暈, 心口痛, 跌親, 起唔到身, 氣促, 透唔到氣, 想死, 唔想活, 嘔血, 暈低, 講唔到嘢,
+  膝頭哥, 背脊, 瞓唔著, 胃口, 冇胃口, 星期日, 星期幾, 天氣, 落雨, 買餸, 打麻雀, 落棋, 聽粵劇, 織冷, 種花, 養雀, 睇報紙]

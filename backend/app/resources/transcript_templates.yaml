@@ -1,0 +1,99 @@
+# Templated seed transcripts. Each variant has yue + en. {name} = how Kaifong addresses the person.
+# Synthetic content only. TODO: native Cantonese speaker must review every yue line.
+greeting:
+  kaifong:
+    - yue: "{name}，早晨呀！我係街坊，{ngo}嘅AI小幫手，打嚟同你傾下偈㗎。今日食咗早餐未呀？"
+      en: "Good morning, {name}! I'm Kaifong, an AI helper from {ngo}, calling for our chat. Have you had breakfast yet?"
+  elder:
+    - { yue: "早晨，食咗喇。", en: "Good morning, yes I have." }
+    - { yue: "早晨呀，啱啱食完。", en: "Good morning, I just finished." }
+appetite:
+  normal:
+    q: [{ yue: "咁就好。咁琴日晚餐呢，食得好唔好呀？", en: "Good. And how was dinner last night?" }]
+    a:
+      - { yue: "食得幾好，煮咗啲餸。", en: "Quite well, I cooked a few dishes." }
+      - { yue: "好呀，食咗兩碗飯。", en: "Fine, I had two bowls of rice." }
+  skipped_meals:
+    q: [{ yue: "咁午餐呢，食咗未呀？", en: "And lunch, have you eaten yet?" }]
+    a:
+      - { yue: "冇食喎，唔係好有胃口。", en: "Haven't eaten, I don't have much appetite." }
+      - { yue: "懶得煮，琴日都冇食午飯。", en: "Can't be bothered to cook, I skipped lunch yesterday too." }
+  reduced:
+    q: [{ yue: "食飯方面呢，食得多唔多呀？", en: "How is your eating, are you eating much?" }]
+    a: [{ yue: "食少咗啲。", en: "I'm eating a bit less." }]
+sleep:
+  good:
+    q: [{ yue: "琴晚瞓得好唔好呀？", en: "Did you sleep well last night?" }]
+    a: [{ yue: "瞓得幾好。", en: "Slept quite well." }]
+  poor:
+    q: [{ yue: "琴晚瞓得好唔好呀？", en: "Did you sleep well last night?" }]
+    a: [{ yue: "瞓唔著，醒咗好多次。", en: "Couldn't sleep, woke up many times." }]
+meds:
+  "yes":
+    q: [{ yue: "今日有冇記得食藥呀？", en: "Did you remember to take your medicine today?" }]
+    a: [{ yue: "食咗喇。", en: "Yes, I took it." }]
+  partial:
+    q: [{ yue: "今日有冇記得食藥呀？", en: "Did you remember to take your medicine today?" }]
+    a: [{ yue: "食咗一半，另一款唔記得。", en: "Took half, forgot the other one." }]
+  "no":
+    q: [{ yue: "今日有冇記得食藥呀？", en: "Did you remember to take your medicine today?" }]
+    a: [{ yue: "未食喎。", en: "Not yet." }]
+  not_applicable:
+    q: [{ yue: "今日有冇需要食藥呀？", en: "Do you need to take any medicine today?" }]
+    a: [{ yue: "我冇食藥㗎。", en: "I don't take any." }]
+pain:
+  none:
+    q: [{ yue: "身體有冇邊度唔舒服呀？", en: "Is anything bothering you physically?" }]
+    a: [{ yue: "冇呀，好好。", en: "No, I'm fine." }]
+  mild:
+    q: [{ yue: "身體有冇邊度唔舒服呀？", en: "Is anything bothering you physically?" }]
+    a: [{ yue: "{loc_yue}有少少痛，不過唔緊要。", en: "A little pain in my {loc}, nothing serious." }]
+  moderate:
+    q: [{ yue: "身體有冇邊度唔舒服呀？", en: "Is anything bothering you physically?" }]
+    a: [{ yue: "{loc_yue}幾痛，行路都辛苦。", en: "My {loc} hurts quite a bit, even walking is hard." }]
+  severe:
+    q: [{ yue: "身體有冇邊度唔舒服呀？", en: "Is anything bothering you physically?" }]
+    a: [{ yue: "{loc_yue}痛得好犀利，成晚都痛。", en: "My {loc} hurts terribly, all night." }]
+  severe_followup:
+    q: [{ yue: "聽落好辛苦。我會同你嘅社工講，等佢哋跟進。", en: "That sounds hard. I'll let your social worker know so they can follow up." }]
+went_out:
+  "yes":
+    q: [{ yue: "今日有冇出過街呀？", en: "Did you go out today?" }]
+    a:
+      - { yue: "落咗街買餸，仲同街坊傾咗幾句。", en: "Went out to buy groceries and chatted with a neighbour." }
+      - { yue: "去咗公園行下。", en: "Went for a walk in the park." }
+  "no":
+    q: [{ yue: "今日有冇出過街呀？", en: "Did you go out today?" }]
+    a:
+      - { yue: "冇喎，唔想出街。", en: "No, I didn't feel like going out." }
+      - { yue: "冇出，膝頭哥唔舒服。", en: "No, my knee isn't good." }
+mood:
+  high:
+    q: [{ yue: "咁今日心情點呀？", en: "So how is your mood today?" }]
+    a: [{ yue: "好開心呀，同你傾下偈就更開心。", en: "Very happy, chatting with you makes it better." }]
+  mid:
+    q: [{ yue: "咁今日心情點呀？", en: "So how is your mood today?" }]
+    a: [{ yue: "一般啦，冇乜特別。", en: "So-so, nothing special." }]
+  low:
+    q: [{ yue: "咁今日心情點呀？", en: "So how is your mood today?" }]
+    a: [{ yue: "好悶呀，冇乜精神。", en: "Very down, no energy." }]
+  lonely:
+    q: [{ yue: "咁今日心情點呀？", en: "So how is your mood today?" }]
+    a:
+      - { yue: "有啲孤單，成日都得我一個。", en: "A bit lonely, I'm always on my own." }
+      - { yue: "好靜呀，好掛住個仔。", en: "Very quiet, I miss my son a lot." }
+confusion:
+  repeated_question:
+    a: [{ yue: "咦，你頭先問過我食咗飯未？我食咗未呀？", en: "Oh, didn't you just ask if I had eaten? Have I eaten?" }]
+  wrong_day_or_date:
+    a: [{ yue: "今日係星期幾呀？係唔係星期日？", en: "What day is it today? Is it Sunday?" }]
+unclear:
+  a:
+    - { yue: "吓？你講乜嘢？", en: "Huh? What did you say?" }
+    - { yue: "聽唔到呀，大聲啲。", en: "I can't hear, speak louder." }
+close:
+  kaifong:
+    - yue: "好啦，唔阻你喇。聽日{time}再打俾你，記得飲多啲水呀，拜拜！"
+      en: "Alright, I won't keep you. I'll call again tomorrow at {time}. Remember to drink water. Bye!"
+  elder:
+    - { yue: "好，拜拜。", en: "OK, bye." }
